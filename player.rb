@@ -5,8 +5,6 @@ class Player
     @name = name
     @lives = 3
     @current_player = false
-  end
-
-  
+  end  
 
 end

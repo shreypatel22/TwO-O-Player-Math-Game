@@ -7,8 +7,8 @@ class Question
   end
 
   def get_input(current_player)
-    puts "#{current_player.name}: What is does #{@num1} + #{@num2} equal?"
-    puts "> "
+    puts "#{current_player.name}: What does #{@num1} + #{@num2} equal?"
+    print "> "
     @answer = gets.chomp
   end
 

@@ -15,10 +15,10 @@ class Game
     current_player = get_current_player
 
     question = Question.new()
-    answer = question.get_input(current_player)
-    correct = question.check_answer(answer)    
+    user_input = question.get_input(current_player)
+    answer = question.check_answer(user_input)    
 
-    update_life(correct, current_player)
+    update_life(answer, current_player)
 
     game_score(@player1, @player2)
 
@@ -38,8 +38,8 @@ class Game
     end
   end
 
-  def update_life(correct, current_player)
-    if !correct
+  def update_life(answer, current_player)
+    if !answer
       current_player.lives -= 1
       puts "#{current_player.name}: Really? Thats wrong!"
     else
